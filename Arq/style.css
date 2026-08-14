@@ -11,7 +11,7 @@ body {
 
 .topo {
     height: 90px;
-    background: #2563eb;
+    background: #eb2525;
     color: white;
 
     display: flex;
@@ -111,7 +111,7 @@ body {
 }
 
 .btn-hoje {
-    background: #2563eb;
+    background: #eb0404ff;
     color: white;
     padding: 10px 18px;
     border-radius: 10px;
@@ -212,7 +212,7 @@ body {
     border-radius: 12px;
     background: #eaf1ff;
 
-    color: #2563eb;
+    color: #eb0404ff;
     font-size: 20px;
 
     display: flex;
@@ -245,7 +245,7 @@ body {
 }
 
 .rodape-servico strong {
-    color: #2563eb;
+    color: #eb0404ff;
     font-size: 24px;
 }
 
@@ -255,7 +255,7 @@ body {
 
 .btn-novo-servico {
     border: none;
-    background: #2563eb;
+    background: #eb0404ff;
     color: white;
 
     padding: 12px 18px;
@@ -353,7 +353,7 @@ body {
 }
 
 .dados-servico strong {
-    color: #2563eb;
+    color: #eb0404ff;
     font-size: 22px;
 }
 
@@ -378,7 +378,7 @@ body {
 
 .btn-editar {
     background: #eff6ff;
-    color: #2563eb;
+    color: #eb0404ff;
 }
 
 .btn-preco {
@@ -462,7 +462,7 @@ body {
 
 .btn-filtrar{
     border:none;
-    background:#2563eb;
+    background:#eb0404ff;
     color:white;
     padding:10px 18px;
     border-radius:10px;
@@ -495,7 +495,7 @@ body {
     border-radius:14px;
 
     background:#eaf1ff;
-    color:#2563eb;
+    color:#eb0404ff;
 
     display:flex;
     align-items:center;
@@ -543,7 +543,7 @@ body {
 
 .barra{
     flex:1;
-    background:#2563eb;
+    background:#eb0404ff;
     border-radius:8px 8px 0 0;
 }
 

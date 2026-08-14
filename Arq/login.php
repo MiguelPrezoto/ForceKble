@@ -67,8 +67,9 @@ body{
     min-height: 100vh;
 }
 .caixa{
-    background-color: #2563eb;
-    border-radius: 15px;
+    background-color: #fff;
+    border: 3.5px #eb0404ff solid;
+    border-radius: 10px;
     padding: 10px;
     display: flex;
     justify-content: center; /* horizontal */
