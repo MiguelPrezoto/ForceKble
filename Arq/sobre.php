@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oficina Show Motors</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="estilizacao.css">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -27,7 +26,7 @@
 
 
 </style>
-<body>
+<body class="sobre">
     <header class="topo">
         <div class="lado-esquerdo">
             <button class="botao-menu">
@@ -49,18 +48,26 @@
             </div>
         </div>
     </header>
-    <Br></Br><center><h1>proga</h1></center>
-    <br><br>
+    <section class="banner">
+       <br><br><h1>Sobre Nós</h1>
+        <br><br>
+        <p> Conheça um pouco mais sobre a nossa empresa</p>
+    </section>
+    
+    <section class="sobre">
+        <h3> Quem Somos? </h3>
+        <p>Nos da Oficina SHOWMOTORS fundada em meados de 2006 como RK Dias, tínhamos na época um grande desafio, vender serviços de alta qualidade com peças originais de reposição em uma localidade já com dezenas de oficinas conceituadas na região. Foi então que começamos com serviços básicos de auto center e mecânica geral. Com o passar do tempo identificamos um mercado com grande carência de serviços altamente técnico e especializado para a demanda que surgira em um mercado aquecido no setor automotivo nacional.</p>
+    </section>
 
-    <p class="fonte">Nos da Oficina SHOWMOTORS fundada em meados de 2006 como RK Dias, tínhamos na época um grande desafio, vender serviços de alta qualidade com peças originais de reposição em uma localidade já com dezenas de oficinas conceituadas na região. Foi então que começamos com serviços básicos de auto center e mecânica geral. Com o passar do tempo identificamos um mercado com grande carência de serviços altamente técnico e especializado para a demanda que surgira em um mercado aquecido no setor automotivo nacional.
-
-​<br><br><br><br><br>
-
-Desde então viemos investindo diretamente em conhecimento e especialização, a oficina SHOWMOTORS hoje possui grande acervo técnico e profissionais altamente qualificados prontos para atender os mais diversos tipos de tecnologia aplicada nos veículos nacionais e importados do mercados.
-
-​<br><br><br><br><br>
-
-Somos uma oficina referência na região, equipada com os mais diversos tipos de equipamentos que existentes no mercado, para atender os serviços de mecânica geral como embreagem, freios, suspensão, troca de óleo, limpeza de bicos entre outros, já dentro do contexto diagnostico e reparo eletrônico, prestamos serviços especializados em sistema de injeção eletrônica, reparos em módulos de injeção, programações de unidades eletrônicas, programação de chaves codificadas, sistemas ABS, EDB, EPS, Air Bag e todo o gerenciamento eletrônico de veículos automotores nacionais e importados.
-
-</p>
+    <div class="Valores">
+        <div class="card">
+            <h3>Missão🎯</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="card">
+        <h3>Visão👀 </h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="card">
+            <h3>Valores💡</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </body>
