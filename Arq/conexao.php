@@ -5,7 +5,7 @@ session_start();
 $host = "localhost:3307";
 $user = "root";
 $pass = "";
-$db = "oficina";
+$db = "showmotors_database";
 
 $conn = new mysqli($host, $user, $pass, $db);
 

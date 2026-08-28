@@ -6,11 +6,11 @@ $mensagem = "";
 
 if(isset($_POST['entrar'])){
 
-    $nome_usuario = $_POST['nome_usuario'];
+    $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $sql = "SELECT * FROM USUARIO
-            WHERE nome_usuario='$nome_usuario'
+    $sql = "SELECT * FROM usuarios
+            WHERE email='$email'
             AND senha='$senha'";
 
     $resultado = $conn->query($sql);
@@ -19,15 +19,15 @@ if(isset($_POST['entrar'])){
 
         $usuario = $resultado->fetch_assoc();
 
-        $_SESSION['usuario'] = $usuario['nome_usuario'];
-        $_SESSION['senha'] = $usuario['senha'];
+        $_SESSION['usuario'] = $usuario['nome'];
+        $_SESSION['email'] = $usuario['email'];
 
-        header("Location: home.php");
+        header("Location: index.php");
         exit();
 
     }else{
 
-        $mensagem = "Nome de usuário ou senha incorretos.";
+        $mensagem = "E-mail ou senha incorretos.";
 
     }
 }
@@ -51,6 +51,12 @@ if(isset($_POST['entrar'])){
 
             <h1 class="titulo">Oficina Show Motors</h1>
         </div>
+
+        <div class="usuario">
+            <div>
+                <a class="link" href="index.php">Voltar</a>
+            </div>
+        </div>
     </header>
 
 <body>
@@ -59,8 +65,8 @@ if(isset($_POST['entrar'])){
 
     <form method="POST" class="texto">
 
-        Nome de Usuário:<br>
-        <input type="text" name="nome_usuario" required> <br><br>
+        Email:<br>
+        <input type="email" name="email" required> <br><br>
 
         Senha:<br>
         <input type="password" name="senha" required><br><br>
@@ -77,14 +83,12 @@ if(isset($_POST['entrar'])){
 
         <br><br>
 
-Não possui conta? <br>
-<a class="Texto02" href="cadastro.php">  Cadastre-se aqui</a>
+Não possui conta? <a class="Texto02" href="cadastro.php">  Cadastre-se </a>
     </form>
 
 <br><br>
 
-Perdeu a senha? <br>
-<a class="Texto02" href="recuperar.php"> Recupere-a aqui </a>
+Perdeu a senha?  <a class="Texto02" href="recuperar.php"> Clique aqui </a>
 
 </div>
 

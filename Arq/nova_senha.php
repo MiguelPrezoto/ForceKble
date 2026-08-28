@@ -5,7 +5,7 @@ include("conexao.php");
 $mensagem = "";
 
 if(!isset($_SESSION['email_recuperacao'])){
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 

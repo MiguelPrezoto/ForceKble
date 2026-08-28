@@ -11,7 +11,20 @@ if(isset($_POST['cadastrar'])){
     $telefone = $_POST['telefone'];
     $senha = $_POST['senha'];
     $confirmar = $_POST['confirmarSenha'];
+    
+    //nome user
+    $nomeDividido = explode(" ", $nome);
+    $qtdNomes = count($nomeDividido);
 
+    if ($qtdNomes < 2) {
+        $nomeUser = $nomeDividido[0];
+    }
+    else {
+        $primeiroNome = $nomeDividido[0];
+        $ultimoNome = end($nomeDividido);
+        $nomeUser = $primeiroNome . "." . $ultimoNome;
+    }
+    
     if($senha != $confirmar){
 
         $mensagem = "As senhas não coincidem.";
@@ -19,7 +32,7 @@ if(isset($_POST['cadastrar'])){
     }else{
 
         $verifica = $conn->query(
-            "SELECT * FROM usuarios WHERE email='$email'"
+            "SELECT * FROM usuario WHERE email='$email'"
         );
 
         if($verifica->num_rows > 0){
@@ -28,17 +41,17 @@ if(isset($_POST['cadastrar'])){
 
         }else{
 
-            $sql = "INSERT INTO usuarios
-            (nome,email,telefone,senha)
+            $sql = "INSERT INTO usuario
+            (nome_cliente, nome_usuario, email, telefone, senha)
             VALUES
-            ('$nome','$email','$telefone','$senha')";
+            ('$nome', '$nomeUser', '$email','$telefone','$senha')";
 
             if($conn->query($sql)){
 
                 echo "
                 <script>
                 alert('Cadastro realizado com sucesso!');
-                window.location='login.php';
+                window.location='index.php';
                 </script>";
 
                 exit();
@@ -50,68 +63,11 @@ if(isset($_POST['cadastrar'])){
 <HTML>
 <HEAD>
  <TITLE>cadastro</TITLE>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="estilizacao.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
-<style>
 
-.link{
-    text-decoration: none;
-    color: rgb(26, 26, 26);
-    background-color: aliceblue;
-    border-radius: 10px;
-    padding-inline: 20px;
-    padding-block: 3px;
-    font-weight: bold;
-    font-size: large;
-    
-}
-
-body{
-    background-image: url("assets/oficina.png");
-    background-size: cover;      
-    background-position: center; 
-    background-repeat: no-repeat;
-
-    margin: 0;
-    min-height: 100vh;
-}
-.caixa{
-    background-color: #2563eb;
-    border-radius: 15px;
-    padding: 10px;
-    display: flex;
-    justify-content: center; /* horizontal */
-    align-items: center;  
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-}
-.BTN_cadastro{
-    border-radius: 5vh;
-    border: none;
-    font-size: small;
-    margin-top:  1vh;
-    margin-right: 1vh;
-    color: aliceblue;
-}
-.Texto{
-    color:aliceblue;
-}
-.Texto02{
-    color:rgb(26, 26, 26);
-    text-decoration: none;
-    font-weight: bold;
-}
-.caixa2{
-    padding: 20px;
-}
-
-</style>
 <header class="topo">
         <div class="lado-esquerdo">
             <button class="botao-menu">
@@ -149,6 +105,8 @@ body{
         Confirmar senha:<br>
         <input type="password" name="confirmarSenha" required><br><br>
 
+
+        
         <?php
             if(!empty($mensagem)){
             echo "<p>$mensagem</p>";
@@ -162,6 +120,5 @@ body{
     </form>
 
 </div>
-
 </body>
 </html>
