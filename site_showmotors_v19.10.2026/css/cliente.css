@@ -1,0 +1,441 @@
+
+.grade-veiculos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card-veiculo {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card-veiculo h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  color: #1f2937;
+}
+
+.card-veiculo h3 i {
+  color: #eb0404;
+}
+
+.placa-veiculo {
+  display: inline-block;
+  background: #f5f6fa;
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  padding: 3px 10px;
+  margin: 6px 0 14px;
+
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.detalhes-veiculo {
+  list-style: none;
+  color: #6b7280;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.detalhes-veiculo strong {
+  color: #1f2937;
+}
+
+
+.linha-dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+
+.aviso-vazio {
+  background: white;
+  border-radius: 14px;
+  padding: 40px 24px;
+  text-align: center;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.aviso-vazio i {
+  font-size: 34px;
+  color: #eb0404;
+  margin-bottom: 12px;
+}
+
+.aviso-vazio p {
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+  .atalhos-cliente,
+  .grade-veiculos,
+  .lista-servicos-escolha {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.form-agendamento {
+  background: white;
+  border-radius: 14px;
+  padding: 28px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.bloco-form {
+  margin-bottom: 28px;
+}
+
+.bloco-form h3 {
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.bloco-form select,
+.bloco-form input[type="date"],
+.bloco-form textarea {
+  width: 100%;
+  max-width: 480px;
+  padding: 10px 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.bloco-form textarea {
+  max-width: 100%;
+  resize: vertical;
+}
+
+.dica {
+  color: #6b7280;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+
+.lista-servicos-escolha {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.opcao-servico {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+}
+
+.opcao-servico:hover {
+  border-color: #fca5a5;
+}
+
+
+.opcao-servico:has(input:checked) {
+  border-color: #eb0404;
+  background: #fef2f2;
+}
+
+.opcao-servico input {
+  margin-top: 4px;
+  accent-color: #eb0404;
+}
+
+.opcao-servico .nome {
+  display: block;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.opcao-servico .desc {
+  display: block;
+  color: #6b7280;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.opcao-servico .preco {
+  margin-left: auto;
+  white-space: nowrap;
+  font-weight: 700;
+  color: #eb0404;
+}
+
+
+.grade-horarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.horario-opcao input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.horario-opcao span {
+  display: inline-block;
+  padding: 8px 16px;
+
+  border: 2px solid #e5e7eb;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.horario-opcao span:hover {
+  border-color: #fca5a5;
+}
+
+.horario-opcao input:checked + span {
+  background: linear-gradient(135deg, #eb2525, #b30000);
+  border-color: #b30000;
+  color: white;
+}
+
+
+.horario-opcao input:focus-visible + span {
+  outline: 3px solid #fecaca;
+  outline-offset: 2px;
+}
+
+
+.resumo-agendamento {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  border-top: 1px solid #ececec;
+  padding-top: 20px;
+}
+
+.resumo-agendamento .total {
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.resumo-agendamento .total strong {
+  display: block;
+  font-size: 26px;
+  color: #eb0404;
+}
+
+.proximo-agendamento {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  background: white;
+  border-left: 6px solid #eb0404;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 24px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.proximo-agendamento > i {
+  font-size: 28px;
+  color: #eb0404;
+}
+
+.proximo-agendamento p {
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.atalhos-cliente {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card-atalho {
+  background: white;
+  border-radius: 14px;
+  padding: 28px 24px;
+
+  color: inherit;
+  text-decoration: none;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.card-atalho:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-atalho i {
+  font-size: 26px;
+  color: #eb0404;
+  margin-bottom: 14px;
+}
+
+.card-atalho h3 {
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.card-atalho p {
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.filtros-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.filtro-status {
+  border: 2px solid #e5e7eb;
+  background: white;
+  color: #1f2937;
+
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filtro-status.ativo {
+  background: linear-gradient(135deg, #eb2525, #b30000);
+  border-color: #b30000;
+  color: white;
+}
+
+.lista-historico {
+  display: grid;
+  gap: 18px;
+}
+
+.card-historico {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.topo-historico {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.topo-historico h3 {
+  color: #1f2937;
+}
+
+.topo-historico p {
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.badge-status {
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge-status.agendado {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge-status.em_andamento {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.badge-status.concluido {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.badge-status.cancelado {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.itens-historico {
+  list-style: none;
+  border-top: 1px solid #ececec;
+}
+
+.itens-historico li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.itens-historico li span:last-child {
+  white-space: nowrap;
+  color: #6b7280;
+}
+
+.rodape-historico {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.rodape-historico .total strong {
+  color: #eb0404;
+  font-size: 22px;
+}
+
+.obs-historico {
+  color: #6b7280;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.btn-cancelar {
+  border: 2px solid #c50303;
+  background: white;
+  color: #c50303;
+
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-cancelar:hover {
+    background: #fef2f2;
+}
